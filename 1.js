@@ -5,7 +5,7 @@ const ovejas = [
   { name: "Ki Na Ma", color: "rojo" },
   { name: "AAAAAaaaaa", color: "rojo" },
   { name: "Nnnnnnnn", color: "rojo" },
-];
+]
 
 const contarOvejas = (ovejas) => {
   ovejas = ovejas.filter(
@@ -13,8 +13,8 @@ const contarOvejas = (ovejas) => {
       e.name.includes("a") &&
       (e.name.includes("n") || e.name.includes("N")) &&
       e.color === "rojo"
-  );
-  return ovejas;
-};
+  )
+  return ovejas
+}
 
-console.log(contarOvejas(ovejas));
+console.log(contarOvejas(ovejas))
