@@ -3,7 +3,7 @@ const convertirLista = (carta) => {
   const arr = carta.trim().split(" ")
   return arr
 }
-
+// Queda pendiente implementarlo con funciones map y filter
 const contarOcurrencias = (letter) => {
   let cartaLista = letter.trim().split(" ")
   const are = []

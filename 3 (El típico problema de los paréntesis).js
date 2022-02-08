@@ -7,24 +7,23 @@ const isValid = (letter) => {
     } else {
       switch (arr[i]) {
         case "}":
-          if (stack[stack.length - 1] === "{" && arr[i-1] !== "{") {
+          if (stack[stack.length - 1] === "{" && arr[i - 1] !== "{") {
             stack.pop()
           }
         case ")":
-          if (stack[stack.length - 1] === "(" && arr[i-1] !== "(") {
+          if (stack[stack.length - 1] === "(" && arr[i - 1] !== "(") {
             stack.pop()
           }
         case "]":
-          if (stack[stack.length - 1] === "[" && arr[i-1] !== "[") {
+          if (stack[stack.length - 1] === "[" && arr[i - 1] !== "[") {
             stack.pop()
           }
       }
     }
   }
-  if(stack.length === 0){
+  if (stack.length === 0) {
     return true
   }
   return false
-  
 }
 console.log(isValid("()"))
