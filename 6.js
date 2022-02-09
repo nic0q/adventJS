@@ -1,28 +1,16 @@
-const otroAlmacen = {
-  baul: {
-    fondo: {
-      objeto: "cd-rom",
-      "otro-objeto": "disquette",
-      "otra-cosa": "mando",
-    },
-  },
-}
-
-const contains = (store, product) => {
-  for (let estanteria in store) {
-    for (const [k, v] of Object.entries(store[estanteria])) {
-      if (v === "vacio") {
+const sumPairs = (numbers, result) => {
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = 1; j < numbers.length; j++) {
+      if (j === i) {
         continue
       } else {
-        for (const [k1, v1] of Object.entries(v)) {
-          if (v1 === product) {
-            return true
-          }
+        if (numbers[j] + numbers[i] === result) {
+          return [numbers[i], numbers[j]]
         }
       }
     }
   }
-  return false
+  return null
 }
 
-console.log(contains(otroAlmacen, "gameboy"))
+console.log(sumPairs([0, 2, 2, 3, -1, 1, 5], 6))
